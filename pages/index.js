@@ -16,10 +16,10 @@ function reducer(state, { type, payload }) {
     case classes.mage:
       return {
         ...state, name: 'Mage',
-        img: '/./../public/static/images/mage.png',
+        img: '/../public/static/images/mage.png',
         color: '#3fc7eb',
         spec_0: {
-          img: '/./../public/static/images/mage/arcane/MagicalSentry.png',
+          img: '/../public/static/images/mage/arcane/MagicalSentry.png',
           column: 0,
           total: 0,
           name: 'Arcane',
@@ -27,7 +27,7 @@ function reducer(state, { type, payload }) {
           lines: []
         },
         spec_1: {
-          img: '/./../public/static/images/mage/fire/FireBolt02.png',
+          img: '/../public/static/images/mage/fire/FireBolt02.png',
           column: 1,
           total: 0,
           name: 'Fire',
@@ -35,7 +35,7 @@ function reducer(state, { type, payload }) {
           lines: []
         },
         spec_2: {
-          img: '/./../public/static/images/mage/frost/FrostBolt02.png',
+          img: '/../public/static/images/mage/frost/FrostBolt02.png',
           column: 2,
           total: 0,
           name: 'Frost',
@@ -46,10 +46,10 @@ function reducer(state, { type, payload }) {
     case classes.paladin:
       return {
         ...state, name: 'Paladin',
-        img: '/./../public/static/images/paladin.png',
+        img: '/../public/static/images/paladin.png',
         color: 'palevioletred',
         spec_0: {
-          img: '/./../public/static/images/holy/HealingLight.png',
+          img: '/../public/static/images/holy/HealingLight.png',
           column: 0,
           total: 0,
           name: 'Holy',
@@ -57,7 +57,7 @@ function reducer(state, { type, payload }) {
           lines: ["pa-0", "pa-1", "pa-2"],
         },
         spec_1: {
-          img: '/./../public/static/images/prot/Devotion.png',
+          img: '/../public/static/images/prot/Devotion.png',
           column: 1,
           total: 0,
           name: 'Protection',
@@ -65,7 +65,7 @@ function reducer(state, { type, payload }) {
           lines: ["pa-3", "pa-4", "pa-5", "pa-6"]
         },
         spec_2: {
-          img: '/./../public/static/images/ret/AuraOfLight.png',
+          img: '/../public/static/images/ret/AuraOfLight.png',
           column: 2,
           total: 0,
           name: 'Retribution',
@@ -96,21 +96,21 @@ export default function Home() {
   const [current, dispatch] = useReducer(reducer, {
     name: 'Paladin',
     color: "palevioletred",
-    img: '/./../public/static/images/paladin.png',
+    img: '/../public/static/images/paladin.png',
     spec_0: {
-      img: '/./../public/static/images/holy/HealingLight.png',
+      img: '/../public/static/images/holy/HealingLight.png',
       name: 'Holy',
       talents: paHoly,
       lines: ["pa-0", "pa-1", "pa-2"],
     },
     spec_1: {
-      img: '/./../public/static/images/prot/Devotion.png',
+      img: '/../public/static/images/prot/Devotion.png',
       name: 'Protection',
       talents: paProt,
       lines: ["line pa-3", "line pa-4", "line pa-5", "line pa-6"]
     },
     spec_2: {
-      img: '/./../public/static/images/ret/AuraOfLight.png',
+      img: '/../public/static/images/ret/AuraOfLight.png',
       name: 'Retribution',
       talents: paRet,
       lines: ["line pa-7", "line pa-8"]
