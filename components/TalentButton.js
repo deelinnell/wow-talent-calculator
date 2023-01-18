@@ -21,27 +21,23 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
         }
     }
 
+    const decFunction = () => {
+        setCount(c => c - 1);
+        decrease(total);
+        decRows(talent.row.name);
+        addTotal()
+    }
+
     const decrement = () => {
         const highestIndex = rowsArray.findLastIndex((e) => e > 0)
-        const highestTotal = highestIndex * 5;
-        const totalsArray = rowsArray.slice(0, highestIndex + 1);
-        const totalAdded = totalsArray.reduce((t, n) => t + n);
-
-        console.log(highestTotal)
-        console.log(totalAdded)
-        console.log(talent.row.num)
-
 
         if (count > 0 && talent.row.num === highestIndex) {
-            setCount(c => c - 1);
-            decrease(total);
-            decRows(talent.row.name);
-            addTotal()
-        } else if (count > 0 && totalAdded > highestTotal) {
-            setCount(c => c - 1);
-            decrease(total);
-            decRows(talent.row.name);
-            addTotal()
+            decFunction()
+        } else if (count > 0 && (highestIndex) * 5 < (rowsArray.slice(0, highestIndex).reduce((t, n) => t + n)) && talent.row.num !== 0) {
+            decFunction()
+
+        } else if (talent.row.num === 0 && rowsArray[0] > 5) {
+            decFunction()
         }
     }
 

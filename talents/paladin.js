@@ -213,6 +213,7 @@ const paHoly = [
                 paHoly[25].available = false;
             }
         },
+        line: "pa-0"
     },
     {
         square: 18,

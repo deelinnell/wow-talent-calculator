@@ -19,61 +19,50 @@ body {
     width: 5px;
     box-shadow: 0 0 8px 2px black;
     border: 1px ridge rgb(128, 128, 128);
-}
-
-.line_uncomplete {
     background-image: linear-gradient(to right, rgb(129, 129, 129), rgb(95, 95, 95), rgb(119, 119, 119));
 }
 
-.line_available {
-    background-image: linear-gradient(to right, rgb(0, 116, 0), rgb(66, 155, 66), rgb(0, 116, 0));
-}
-
-.line_complete {
-    background-image: linear-gradient(to right, rgb(255, 183, 0), rgb(223, 178, 64), rgb(255, 183, 0));
-}
-
-.line.pa-0 {
+#pa-0 {
     height: 74px;
     left: 115px;
     bottom: 388px;
 }
-.line.pa-1 {
+#pa-1 {
     height: 72px;
     bottom: 281px;
     left: 115px;
 }
-.line.pa-2 {
+#pa-2 {
     height: 126px;
     left: 115px;
     bottom: 119px;
 }
-.line.pa-3 {
+#pa-3 {
     height: 30px;
     left: 61px;
     top: 165px;
 }
-.line.pa-4 {
+#pa-4 {
     height: 126px;
     left: 115px;
     bottom: 250px;
 }
-.line.pa-5 {
+#pa-5 {
     height: 100px;
     left: 115px;
     bottom: 150px;
 }
-.line.pa-6 {
+#pa-6 {
     height: 30px;
     left: 115px;
     bottom: 118px;
 }
-.line.pa-7 {
+#pa-7 {
     height: 180px;
     left: 115px;
     bottom: 300px;
 }
-.line.pa-8 {
+#pa-8 {
     height: 30px;
     left: 115px;
     bottom: 118px;

@@ -34,7 +34,7 @@ function TalentContainer({ spec, specName, lines, total, name, increase, decreas
     return (
         <div className={styles.talent_container}>
             {lines.map((value) => {
-                return <div key={value} className={'line ' + value + ' ' + 'line_uncomplete'}></div>
+                return <div key={value} className="line" id={value}></div>
             })}
             {spec.map((value) => {
                 return value.talent ? <TalentButton

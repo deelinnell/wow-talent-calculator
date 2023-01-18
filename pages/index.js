@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from './../styles/Home.module.css'
 import { useReducer } from "react";
 import TalentContainer from "./../components/TalentContainer";
@@ -107,13 +106,13 @@ export default function Home() {
       img: '/../public/static/images/prot/Devotion.png',
       name: 'Protection',
       talents: paProt,
-      lines: ["line pa-3", "line pa-4", "line pa-5", "line pa-6"]
+      lines: ["pa-3", "pa-4", "pa-5", "pa-6"]
     },
     spec_2: {
       img: '/../public/static/images/ret/AuraOfLight.png',
       name: 'Retribution',
       talents: paRet,
-      lines: ["line pa-7", "line pa-8"]
+      lines: ["pa-7", "pa-8"]
     }
   });
 
@@ -134,10 +133,7 @@ export default function Home() {
         </div>
         <div className={styles.header}>
           <div className={styles.header_left}>
-            <Image src={current.img} alt='' className={styles.img}
-              height={30}
-              width={30}
-            ></Image>
+            <div className={styles.img + ' ' + styles.icon_paladin}></div>
             <p className={styles.p_left} style={{ color: current.color, paddingTop: '10px' }}>{current.name}:</p>
             <div className={styles.header_distribution}>
               <p id={styles.specOneTtl}>{total1}</p>
@@ -154,10 +150,7 @@ export default function Home() {
       <div className={styles.column_container}>
         <div className={styles.spec_column + ' ' + styles.one}>
           <div className={styles.spec_header + ' ' + styles.one}>
-            <Image src={spec_0.img} alt='' className={styles.img}
-              height={30}
-              width={30}
-            ></Image>
+            <div className={styles.img + ' ' + styles.icon_holy}></div>
             <p className={styles.p_left}>{spec_0.name}</p>
             <p className={styles.p_right}>{total1} / 71</p>
           </div>
@@ -176,10 +169,7 @@ export default function Home() {
         </div>
         <div className={styles.spec_column + ' ' + styles.two}>
           <div className={styles.spec_header + ' ' + styles.two}>
-            <Image src={spec_1.img} alt='' className={styles.img}
-              height={30}
-              width={30}
-            ></Image>
+            <div className={styles.img + ' ' + styles.icon_prot}></div>
             <p className={styles.p_left}>{spec_1.name}</p>
             <p className={styles.p_right}>{total2} / 71</p>
           </div>
@@ -198,10 +188,7 @@ export default function Home() {
         </div>
         <div className={styles.spec_column + ' ' + styles.three}>
           <div className={styles.spec_header + ' ' + styles.three}>
-            <Image src={spec_2.img} alt='' className={styles.img}
-              height={30}
-              width={30}
-            ></Image>
+            <div className={styles.img + ' ' + styles.icon_ret}></div>
             <p className={styles.p_left}>{spec_2.name}</p>
             <p className={styles.p_right}>{total3} / 71</p>
           </div>

@@ -116,6 +116,25 @@
     border-radius: 10px;
 }
 
+.icon_paladin {
+    background-image: url("./../public/static/images/paladin.png");
+    background-size: contain;
+}
+
+.icon_holy {
+    background-image: url("./../public/static/images/holy/HealingLight.png");
+    background-size: contain; 
+}
+
+.icon_prot {
+    background-image: url("./../public/static/images/prot/Devotion.png");
+    background-size: contain; 
+}
+
+.icon_ret {
+    background-image: url("./../public/static/images/ret/AuraOfLight.png");
+    background-size: contain; 
+}
 
 .spec_column {
     position: relative;
