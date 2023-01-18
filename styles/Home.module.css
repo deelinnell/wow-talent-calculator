@@ -1,0 +1,193 @@
+
+.app {
+    background-color: rgb(46, 46, 46);
+}
+
+.nav_bar {
+    display: flex;
+    justify-content: space-around;
+    width: 1280px;
+    height: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, .7), rgb(27, 27, 27) 15%, rgba(0, 0, 0, 0.8) 70%);
+    box-shadow: 0 0 10px 3px black;
+    margin: 15px auto 15px auto;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 3px var(--paladin-color);
+}
+
+.link_container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 90px;
+    width: 100px;
+}
+
+.link_container.pa {
+    border-left: solid 5px var(--paladin-color);
+    border-right: solid 1px var(--paladin-color);
+    background-image: linear-gradient(rgb(190, 150, 150), rgb(245, 210, 216) 15%, rgb(197, 147, 147) 70%);
+    color: rgb(94, 220, 230);
+}
+.link_container.mg {
+    border-left: solid 5px rgb(5, 116, 160);
+    border-right: solid 1px rgb(5, 111, 153);
+    background-image: linear-gradient(rgb(33, 117, 150), rgb(96, 168, 197) 15%, rgb(52, 137, 170) 70%);
+    background-color: rgba(0, 100, 139, 0.527);
+}
+
+.link_container:hover {
+    cursor: pointer;
+}
+
+.link {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.link.pa {
+    background-image: url("./../public/static/images/paladin.png");
+    border: 1px solid var(--paladin-color) ;
+    box-shadow: 0 0 5px var(--paladin-color) inset;
+}
+.link.mg {
+    background-image: url("./../public/static/images/mage.png");
+    border: 1px solid rgb(2, 79, 109);
+    box-shadow: 0 0 10px rgb(2, 79, 109) inset;
+}
+
+.header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+    padding-left: 10px;
+    background-color: rgb(0, 0, 0, .70);
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.header_left, .header_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_distribution {
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header_distribution p {
+        padding: 4px;
+    }
+
+.header_reqlevel, 
+.header_points {
+    display: flex;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.header_reqlevel p, 
+.header_points p {
+        color: white;
+        font-size: 14px;
+        padding-left: 5px;
+    }
+
+.column_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.img {   
+    float: left;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+}
+
+
+.spec_column {
+    position: relative;
+    display: grid;
+    align-items: space-between;
+    margin: 5px;
+    width: auto;
+    border: 3px solid black;
+    border-radius: 6px;
+    box-shadow: 0 0 80px 10px black inset;
+}
+
+.spec_column.one {
+    background-image: url("./../public/static/images/holybackground.png");
+}
+
+.spec_column.two {
+    background-image: url("./../public/static/images/protbackground.png");
+}
+
+.spec_column.three {
+    background-image: url("./../public/static/images/retbackground.png");    
+}
+
+.spec_header {
+    align-self: flex-start;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    background-color: black;
+    height: 35px;
+    box-shadow: 0 2px 10px black;
+}
+
+.p_left {
+    float: left;
+    margin: 0 0 10px 10px;
+    padding-top: 3px;
+}
+.p_right {
+    text-align: right;
+    padding-top: 3px;
+}
+
+.spec_footer {
+    align-self: flex-end;
+    background-color: black;
+    height: 40px;
+    box-shadow: 0 -2px 10px black;
+    display: flex;
+    align-items: center;
+}
+
+.resetbutton {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    border: 2px solid rgb(80, 80, 80);
+    height: 75%;
+    width: 95%;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+.resetbutton p {
+    position: relative;
+    right: 5px;
+    top: 2px;
+    color: rgb(226, 49, 49);
+    font-size: 14px;
+}
+
+.resetbutton:hover {
+    cursor: pointer;
+}

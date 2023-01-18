@@ -1,0 +1,14 @@
+.talent_container {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(11, auto);
+    padding: 20px 36px 20px 36px;
+}
+
+.talent_container p {
+    padding: none;
+
+}

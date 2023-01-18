@@ -1,0 +1,470 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(187, 187, 187);
+    --paladin-color: palevioletred;
+}
+
+body {
+    background-color: rgb(46, 46, 46);
+}
+
+.line {
+    position: absolute;
+    z-index: 9;
+    width: 5px;
+    box-shadow: 0 0 8px 2px black;
+    border: 1px ridge rgb(128, 128, 128);
+}
+
+.line_uncomplete {
+    background-image: linear-gradient(to right, rgb(129, 129, 129), rgb(95, 95, 95), rgb(119, 119, 119));
+}
+
+.line_available {
+    background-image: linear-gradient(to right, rgb(0, 116, 0), rgb(66, 155, 66), rgb(0, 116, 0));
+}
+
+.line_complete {
+    background-image: linear-gradient(to right, rgb(255, 183, 0), rgb(223, 178, 64), rgb(255, 183, 0));
+}
+
+.line.pa-0 {
+    height: 74px;
+    left: 115px;
+    bottom: 388px;
+}
+.line.pa-1 {
+    height: 72px;
+    bottom: 281px;
+    left: 115px;
+}
+.line.pa-2 {
+    height: 126px;
+    left: 115px;
+    bottom: 119px;
+}
+.line.pa-3 {
+    height: 30px;
+    left: 61px;
+    top: 165px;
+}
+.line.pa-4 {
+    height: 126px;
+    left: 115px;
+    bottom: 250px;
+}
+.line.pa-5 {
+    height: 100px;
+    left: 115px;
+    bottom: 150px;
+}
+.line.pa-6 {
+    height: 30px;
+    left: 115px;
+    bottom: 118px;
+}
+.line.pa-7 {
+    height: 180px;
+    left: 115px;
+    bottom: 300px;
+}
+.line.pa-8 {
+    height: 30px;
+    left: 115px;
+    bottom: 118px;
+}
+
+.talent {
+    position: relative;
+    border: 1px solid white;
+    z-index: 599;
+    width: 38px;
+    height: 38px;
+    margin: 8px;
+    border: 3px ridge rgb(26, 131, 26);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px black;
+    filter: grayscale(100%);
+}
+
+.talent p {
+        position: relative;
+        left: 21px;
+        top: 18px;
+        width: 20px;
+        background-color: black;
+        background-size: 15px;
+        font-size: 10px;
+    }
+
+.complete {
+    filter: none;
+    border-color: rgb(223, 178, 64);
+}
+
+.available {
+    filter: none;
+}
+
+.empty {
+    border: none;
+    background: none;
+    box-shadow: none;
+    cursor: default;
+    width: 38px;
+    height: 38px;
+    margin: 8px;
+}
+
+.talent:hover {
+    cursor: pointer;
+}
+
+.talent::before,
+.talent::after {
+    --scale: 0;
+    --arrow-size: 20px;
+
+    z-index: 999;
+    position: absolute;
+    top: -1px;
+    left: 110%;
+    transform: translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.talent::before {
+    --translate-y: calc(-70% - var(--arrow-size));
+    content: attr(tooltip);
+    z-index: 999;
+    color: white;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.753);
+    border: 3px ridge var(--paladin-color);
+    font-size: 16px;
+    width: max-content;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+}
+
+/*** PALADIN ***/
+
+#paHoly0 {
+    background-image: url(../public/static/images/holy/SpiritualFocus.png);
+    background-size: cover;
+}
+#paHoly1 {
+    background-image: url(../public/static/images/holy/SealofPure.png);
+    background-size: cover;
+}
+#paHoly2 {
+    background-image: url(../public/static/images/holy/HealingLight.png);
+    background-size: cover;
+}
+#paHoly3 {
+    background-image: url(../public/static/images/holy/DivineIntellect.png);
+    background-size: cover;
+}
+#paHoly4 {
+    background-image: url(../public/static/images/holy/UnyieldingFaith.png);
+    background-size: cover;
+}
+#paHoly5 {
+    background-image: url(../public/static/images/holy/AuraMastery.png);
+    background-size: cover;
+}
+#paHoly6 {
+    background-image: url(../public/static/images/holy/Illumination.png);
+    background-size: cover;
+}
+#paHoly7 {
+    background-image: url(./../public/static/images/holy/LayOnHands.png);
+    background-size: cover;
+}
+#paHoly8 {
+    background-image: url(./../public/static/images/holy/ConcentrationAura.jpg);
+    background-size: cover;
+}
+#paHoly9 {
+    background-image: url(./../public/static/images/holy/Wisdom.png);
+    background-size: cover;
+}
+#paHoly10 {
+    background-image: url(./../public/static/images/holy/BlessedHands.png);
+    background-size: cover;
+}
+#paHoly11 {
+    background-image: url(./../public/static/images/holy/PureOfHeart.png);
+    background-size: cover;
+}
+#paHoly12 {
+    background-image: url(./../public/static/images/holy/DivineFavor.png);
+    background-size: cover;
+}
+#paHoly13 {
+    background-image: url(./../public/static/images/holy/SanctifiedLight.png);
+    background-size: cover;
+}
+#paHoly14 {
+    background-image: url(./../public/static/images/holy/PurifyingPower.png);
+    background-size: cover;
+}
+#paHoly15 {
+    background-image: url(./../public/static/images/holy/Power.png);
+    background-size: cover;
+}
+#paHoly16 {
+    background-image: url(./../public/static/images/holy/LightsGrace.png);
+    background-size: cover;
+}
+#paHoly17 {
+    background-image: url(./../public/static/images/holy/HolyShock.png);
+    background-size: cover;
+}
+#paHoly18 {
+    background-image: url(./../public/static/images/holy/BlessedLife.png);
+    background-size: cover;
+}
+#paHoly19 {
+    background-image: url(./../public/static/images/holy/SacredCleansing.png);
+    background-size: cover;
+}
+#paHoly20 {
+    background-image: url(./../public/static/images/holy/HolyGuidance.png);
+    background-size: cover;
+}
+#paHoly21 {
+    background-image: url(../public/static/images/holy/DivineIllumination.png);
+    background-size: cover;
+}
+#paHoly22 {
+    background-image: url(../public/static/images/holy/JudgementofthePure.png);
+    background-size: cover;
+}
+#paHoly23 {
+    background-image: url(../public/static/images/holy/InfusionofLight.png);
+    background-size: cover;
+}
+#paHoly24 {
+    background-image: url(./../public/static/images/holy/EnlightenedJudgements.png);
+    background-size: cover;
+}
+#paHoly25 {
+    background-image: url(./../public/static/images/holy/BeaconofLight.png);
+    background-size: cover;
+}
+#paProt0 {
+    background-image: url(./../public/static/images/prot/Divinity.png);
+    background-size: cover;
+}
+#paProt1 {
+    background-image: url(./../public/static/images/prot/Strength.png);
+    background-size: cover;
+}
+#paProt2 {
+    background-image: url(./../public/static/images/prot/Stoicism.png);
+    background-size: cover;
+}
+#paProt3 {
+    background-image: url(./../public/static/images/prot/Guardian.png);
+    background-size: cover;
+}
+#paProt4 {
+    background-image: url(./../public/static/images/prot/Anticipation.png);
+    background-size: cover;
+}
+#paProt5 {
+    background-image: url(./../public/static/images/prot/Divine.png);
+    background-size: cover;
+}
+#paProt6 {
+    background-image: url(./../public/static/images/prot/Fury.png);
+    background-size: cover;
+}
+#paProt7 {
+    background-image: url(./../public/static/images/prot/Toughness.png);
+    background-size: cover;
+}
+#paProt8 {
+    background-image: url(./../public/static/images/prot/Divine.png);
+    background-size: cover;
+}
+#paProt9 {
+    background-image: url(./../public/static/images/prot/Hammer.png);
+    background-size: cover;
+}
+#paProt10 {
+    background-image: url(./../public/static/images/prot/Devotion.png);
+    background-size: cover;
+}
+#paProt11 {
+    background-image: url(./../public/static/images/prot/Sanctuary.png);
+    background-size: cover;
+}
+#paProt12 {
+    background-image: url(./../public/static/images/prot/Reckoning.png);
+    background-size: cover;
+}
+#paProt13 {
+    background-image: url(./../public/static/images/prot/SacredDuty.png);
+    background-size: cover;
+}
+#paProt14 {
+    background-image: url(./../public/static/images/prot/OneHanded.jpg);
+    background-size: cover;
+}
+#paProt15 {
+    background-image: url(./../public/static/images/prot/Attunement.png);
+    background-size: cover;
+}
+#paProt16 {
+    background-image: url(./../public/static/images/prot/HolyShield.png);
+    background-size: cover;
+}
+#paProt17 {
+    background-image: url(./../public/static/images/prot/ArdentDefender.png);
+    background-size: cover;
+}
+#paProt18 {
+    background-image: url(./../public/static/images/prot/Redoubt.png);
+    background-size: cover;
+}
+#paProt19 {
+    background-image: url(./../public/static/images/prot/WeaponMastery.png);
+    background-size: cover;
+}
+#paProt20 {
+    background-image: url(./../public/static/images/prot/TouchedbyLight.png);
+    background-size: cover;
+}
+#paProt21 {
+    background-image: url(./../public/static/images/prot/AvengersShield.png);
+    background-size: cover;
+}
+#paProt22 {
+    background-image: url(./../public/static/images/prot/GaurdedbytheLight.png);
+    background-size: cover;
+}
+#paProt23 {
+    background-image: url(./../public/static/images/prot/ShieldoftheTemplar.png);
+    background-size: cover;
+}
+#paProt24 {
+    background-image: url(./../public/static/images/prot/JudgementsoftheJust.png);
+    background-size: cover;
+}
+#paProt25 {
+    background-image: url(./../public/static/images/prot/HammeroftheRighteous.png);
+    background-size: cover;
+}
+#paRet0 {
+    background-image: url(./../public/static/images/ret/Deflection.png);
+    background-size: cover;
+}
+#paRet1 {
+    background-image: url(./../public/static/images/ret/Benediction.png);
+    background-size: cover;
+}
+#paRet2 {
+    background-image: url(./../public/static/images/ret/Judgements.png);
+    background-size: cover;
+}
+#paRet3 {
+    background-image: url(./../public/static/images/ret/Crusader.png);
+    background-size: cover;
+}
+#paRet4 {
+    background-image: url(./../public/static/images/ret/Might.png);
+    background-size: cover;
+}
+#paRet5 {
+    background-image: url(./../public/static/images/ret/Vindication.png);
+    background-size: cover;
+}
+#paRet6 {
+    background-image: url(./../public/static/images/ret/Conviction.png);
+    background-size: cover;
+}
+#paRet7 {
+    background-image: url(./../public/static/images/ret/Command.png);
+    background-size: cover;
+}
+#paRet8 {
+    background-image: url(./../public/static/images/ret/PersuitofJustice.png);
+    background-size: cover;
+}
+#paRet9 {
+    background-image: url(./../public/static/images/ret/EyeforanEye.png);
+    background-size: cover;
+}
+#paRet10 {
+    background-image: url(./../public/static/images/ret/Crusader.png);
+    background-size: cover;
+}
+#paRet11 {
+    background-image: url(./../public/static/images/ret/Crusade.png);
+    background-size: cover;
+}
+#paRet12 {
+    background-image: url(./../public/static/images/ret/TwoHanded.jpg);
+    background-size: cover;
+}
+#paRet13 {
+    background-image: url(./../public/static/images/ret/Retribution.png);
+    background-size: cover;
+}
+#paRet14 {
+    background-image: url(./../public/static/images/ret/Vengeance.jpg);
+    background-size: cover;
+}
+#paRet15 {
+    background-image: url(./../public/static/images/ret/DivinePurpose.png);
+    background-size: cover;
+}
+#paRet16 {
+    background-image: url(./../public/static/images/ret/ArtofWar.png);
+    background-size: cover;
+}
+#paRet17 {
+    background-image: url(./../public/static/images/ret/Repentance.png);
+    background-size: cover;
+}
+#paRet18 {
+    background-image: url(./../public/static/images/ret/JudgementoftheWise.png);
+    background-size: cover;
+}
+#paRet19 {
+    background-image: url(./../public/static/images/ret/Fanaticism.png);
+    background-size: cover;
+}
+#paRet20 {
+    background-image: url(./../public/static/images/ret/SanctifiedWrath.png);
+    background-size: cover;
+}
+#paRet21 {
+    background-image: url(./../public/static/images/ret/SwiftRetribution.png);
+    background-size: cover;
+}
+#paRet22 {
+    background-image: url(./../public/static/images/ret/CrusaderStrike.png);
+    background-size: cover;
+}
+#paRet23 {
+    background-image: url(./../public/static/images/ret/SheathofLight.png);
+    background-size: cover;
+}
+#paRet24 {
+    background-image: url(./../public/static/images/ret/RighteousVengeance.png);
+    background-size: cover;
+}
+#paRet25 {
+    background-image: url(./../public/static/images/ret/DivineStorm.png);
+    background-size: cover;
+}
