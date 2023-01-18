@@ -7,13 +7,13 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
     const totalAll = useTotalStore((state) => state.totalAll);
     const addTotal = useTotalStore((state) => state.addTotal);
 
-    const [style, setStyle] = useState("talent");
+    const [style, setStyle] = useState(styles.talent);
     const [count, setCount] = useState();
 
     const max = talent.max;
 
     const increment = () => {
-        if (count < max && total >= talent.pointsreq && totalAll < 71 && talent.depend === undefined) {
+        if (count < max && total >= talent.pointsreq && totalAll < 70 && talent.depend === undefined) {
             setCount(state => state + 1);
             increase(total);
             incRows(talent.row.name);
@@ -21,23 +21,24 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
         }
     }
 
-    const decFunction = () => {
+    const dec = () => {
         setCount(c => c - 1);
         decrease(total);
         decRows(talent.row.name);
         addTotal()
     }
 
-    const decrement = () => {
+    const decrement = (e) => {
+        e.preventDefault()
         const highestIndex = rowsArray.findLastIndex((e) => e > 0)
 
         if (count > 0 && talent.row.num === highestIndex) {
-            decFunction()
+            dec()
         } else if (count > 0 && (highestIndex) * 5 < (rowsArray.slice(0, highestIndex).reduce((t, n) => t + n)) && talent.row.num !== 0) {
-            decFunction()
+            dec()
 
         } else if (talent.row.num === 0 && rowsArray[0] > 5) {
-            decFunction()
+            dec()
         }
     }
 
@@ -55,19 +56,31 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
             if (talent.dependency) {
                 talent.dependency(true);
             }
-            return setStyle("talent complete")
+            if (talent.line) {
+                document.getElementById(talent.line).classList.remove('available')
+                document.getElementById(talent.line).classList.add('complete')
+            }
+            return setStyle(styles.talent + ' ' + styles.complete)
         }
         if (count < max && talent.available) {
             if (talent.dependency) {
                 talent.dependency(false);
             }
-            return setStyle("talent available")
+            if (talent.line) {
+                document.getElementById(talent.line).classList.remove('unavailable')
+                document.getElementById(talent.line).classList.add('available')
+            }
+            return setStyle(styles.talent + ' ' + styles.available)
         }
         if (talent.available === false) {
             if (talent.dependency) {
                 talent.dependency(false);
             }
-            return setStyle("talent")
+            if (talent.line) {
+                document.getElementById(talent.line).classList.remove('available')
+                document.getElementById(talent.line).classList.add('unavailable')
+            }
+            return setStyle(styles.talent)
         }
     }, [count, max, talent.available, name, total, talent]);
 
@@ -81,12 +94,9 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
         <button
             tooltip={talent.tooltip}
             className={style}
-            id={talent.id}
+            id={styles[talent.id]}
             onClick={increment}
-            onContextMenu={(e) => {
-                e.preventDefault()
-                decrement()
-            }}
+            onContextMenu={(e) => decrement(e)}
         ><p>{count}/{max}</p>
         </button>
     )

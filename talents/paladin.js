@@ -301,6 +301,7 @@ const paHoly = [
                 paHoly[37].available = false;
             }
         },
+        line: "pa-1"
     },
     {
         square: 26,
@@ -404,6 +405,7 @@ const paHoly = [
         available: false,
         complete: false,
         depend: true,
+        line: "pa-2"
     },
     {
         square: 38,
@@ -538,7 +540,16 @@ const paProt = [
         talent: true,
         max: 1,
         available: false,
-        complete: false
+        complete: false,
+        dependency: function (arg) {
+            if (arg === true) {
+                paProt[12].depend = undefined;
+                paProt[12].available = true;
+            } else if (arg === false) {
+                paProt[12].depend = true;
+                paProt[12].available = false;
+            }
+        },
     },
     {
         square: 9,
@@ -581,7 +592,9 @@ const paProt = [
         talent: true,
         max: 2,
         available: false,
-        complete: false
+        complete: false,
+        depend: true,
+        line: "pa-3"
     },
     {
         square: 13,
@@ -725,6 +738,7 @@ const paProt = [
                 paProt[33].available = false;
             }
         },
+        line: "pa-4"
     },
     {
         square: 26,
@@ -813,6 +827,7 @@ const paProt = [
                 paProt[37].available = false;
             }
         },
+        line: "pa-5"
     },
     {
         square: 34,
@@ -848,6 +863,7 @@ const paProt = [
         available: false,
         complete: false,
         depend: true,
+        line: "pa-6"
     },
     {
         square: 38,
@@ -1127,6 +1143,7 @@ const paRet = [
         available: false,
         complete: false,
         depend: true,
+        line: "pa-7"
     },
     {
         square: 22,
@@ -1203,7 +1220,8 @@ const paRet = [
         talent: true,
         max: 3,
         available: false,
-        complete: false
+        complete: false,
+        line: "pa-8"
     },
     {
         square: 30,

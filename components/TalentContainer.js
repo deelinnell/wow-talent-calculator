@@ -18,7 +18,7 @@ function TalentContainer({ spec, specName, lines, total, name, increase, decreas
         row10: 0,
     });
 
-    const rowsArray = [rows.row0, rows.row1, rows.row2, rows.row3, rows.row4, rows.row5, rows.row6, rows.row7, rows.row8, rows.row9, rows.row10,];
+    const rowsArray = Object.values(rows);
 
     const incRows = (row) => {
         setRows(state => {
@@ -50,7 +50,7 @@ function TalentContainer({ spec, specName, lines, total, name, increase, decreas
                     :
                     <div
                         key={specName + value.square}
-                        className="empty" />
+                        className={styles.empty} />
             })}
         </div>
     )
