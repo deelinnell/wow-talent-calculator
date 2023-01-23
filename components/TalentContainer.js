@@ -2,21 +2,28 @@ import styles from '@/styles/TalentContainer.module.css'
 import { memo, useState, useEffect } from "react"
 import TalentButton from "./TalentButton"
 
+
 function TalentContainer({ spec, specName, lines, total, name, increase, decrease }) {
 
-    const [rows, setRows] = useState({
-        row0: 0,
-        row1: 0,
-        row2: 0,
-        row3: 0,
-        row4: 0,
-        row5: 0,
-        row6: 0,
-        row7: 0,
-        row8: 0,
-        row9: 0,
-        row10: 0,
-    });
+    const [rows, setRows] = useState('');
+
+    useEffect(() => {
+        if (total === 0) {
+            setRows({
+                row0: 0,
+                row1: 0,
+                row2: 0,
+                row3: 0,
+                row4: 0,
+                row5: 0,
+                row6: 0,
+                row7: 0,
+                row8: 0,
+                row9: 0,
+                row10: 0,
+            });
+        }
+    }, [total]);
 
     const rowsArray = Object.values(rows);
 

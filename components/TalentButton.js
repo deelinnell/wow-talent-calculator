@@ -13,7 +13,7 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
     const max = talent.max;
 
     const increment = () => {
-        if (count < max && total >= talent.pointsreq && totalAll < 70 && talent.depend === undefined) {
+        if (count < max && total >= talent.pointsreq && totalAll < 71 && talent.depend === undefined) {
             setCount(state => state + 1);
             increase(total);
             incRows(talent.row.name);
@@ -49,7 +49,7 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
         if (total < talent.pointsreq) {
             talent.available = false;
         }
-    });
+    }, [total]);
 
     useEffect(() => {
         if (count === max) {
@@ -89,6 +89,14 @@ function TalentButton({ rowsArray, incRows, decRows, talent, total, increase, de
             setCount(0)
         }
     }, [total]);
+
+    useEffect(() => {
+        if (totalAll === 71 && talent.available === true && count < max) {
+            return setStyle(styles.talent)
+        } else if (totalAll < 71 && talent.available === true && count < max) {
+            return setStyle(styles.talent + ' ' + styles.available)
+        }
+    }, [totalAll])
 
     return (
         <button

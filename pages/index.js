@@ -90,7 +90,7 @@ export default function Home() {
   const decrease1 = useTotalStore((state) => state.decrease1);
   const decrease2 = useTotalStore((state) => state.decrease2);
   const decrease3 = useTotalStore((state) => state.decrease3);
-  const removeTotal = useTotalStore((state) => state.removeTotal);
+  const addTotal = useTotalStore((state) => state.addTotal);
 
   const [current, dispatch] = useReducer(reducer, {
     name: 'Paladin',
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.header_right}>
-            <div className={styles.header_reqlevel}>Required level: <p>{10 + total1 + total2 + total3}</p></div>
+            <div className={styles.header_reqlevel}>Required level: <p>{9 + total1 + total2 + total3}</p></div>
             <div className={styles.header_points}>Points left: <p>{71 - total1 - total2 - total3}</p></div>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function Home() {
             lines={spec_0.lines}>
           </TalentContainer>
           <div className={styles.spec_footer + ' ' + styles.one}>
-            <button className={styles.resetbutton + ' ' + styles.one} onClick={remove1}><p>✖</p>Reset</button>
+            <button className={styles.resetbutton + ' ' + styles.one} onClick={() => { remove1(); addTotal() }}><p>✖</p>Reset</button>
           </div>
         </div>
         <div className={styles.spec_column + ' ' + styles.two}>
@@ -183,7 +183,7 @@ export default function Home() {
             lines={spec_1.lines}>
           </TalentContainer>
           <div className={styles.spec_footer + ' ' + styles.two}>
-            <button className={styles.resetbutton + ' ' + styles.two} onClick={remove2}><p>✖</p>Reset</button>
+            <button className={styles.resetbutton + ' ' + styles.two} onClick={() => { remove2(); addTotal() }}><p>✖</p>Reset</button>
           </div>
         </div>
         <div className={styles.spec_column + ' ' + styles.three}>
@@ -202,7 +202,7 @@ export default function Home() {
             lines={spec_2.lines}>
           </TalentContainer>
           <div className={styles.spec_footer + ' ' + styles.three}>
-            <button className={styles.resetbutton + ' ' + styles.three} onClick={remove3}><p>✖</p>Reset</button>
+            <button className={styles.resetbutton + ' ' + styles.three} onClick={() => { remove3(); addTotal() }}><p>✖</p>Reset</button>
           </div>
         </div>
       </div>
