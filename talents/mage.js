@@ -7,11 +7,10 @@ const mgArc = [
         },
         id: "mgArc0",
         talent: true,
-        max: 5,
-        pointsreq: 5,
-        available: false,
+        max: 2,
+        pointsreq: 0,
+        available: true,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 1,
@@ -21,11 +20,10 @@ const mgArc = [
         },
         id: "mgArc1",
         talent: true,
-        max: 5,
-        pointsreq: 5,
-        available: false,
+        max: 3,
+        pointsreq: 0,
+        available: true,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 2,
@@ -36,10 +34,9 @@ const mgArc = [
         id: "mgArc2",
         talent: true,
         max: 5,
-        pointsreq: 5,
-        available: false,
+        pointsreq: 0,
+        available: true,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 3,
@@ -53,11 +50,10 @@ const mgArc = [
         },
         id: "mgArc3",
         talent: true,
-        max: 5,
+        max: 3,
         pointsreq: 5,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 5,
@@ -67,11 +63,10 @@ const mgArc = [
         },
         id: "mgArc4",
         talent: true,
-        max: 5,
+        max: 2,
         pointsreq: 5,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 6,
@@ -85,7 +80,6 @@ const mgArc = [
         pointsreq: 5,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 7,
@@ -99,11 +93,10 @@ const mgArc = [
         },
         id: "mgArc6",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 2,
+        pointsreq: 10,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 9,
@@ -113,11 +106,10 @@ const mgArc = [
         },
         id: "mgArc7",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 10,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 10,
@@ -127,11 +119,10 @@ const mgArc = [
         },
         id: "mgArc8",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 10,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 11,
@@ -141,11 +132,10 @@ const mgArc = [
         },
         id: "mgArc9",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 1,
+        pointsreq: 10,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 12,
@@ -155,11 +145,10 @@ const mgArc = [
         },
         id: "mgArc10",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 2,
+        pointsreq: 15,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 13,
@@ -169,11 +158,10 @@ const mgArc = [
         },
         id: "mgArc11",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 2,
+        pointsreq: 15,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 14,
@@ -183,11 +171,10 @@ const mgArc = [
         },
         id: "mgArc12",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 15,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 15,
@@ -197,11 +184,10 @@ const mgArc = [
         },
         id: "mgArc13",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 15,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 16,
@@ -211,11 +197,10 @@ const mgArc = [
         },
         id: "mgArc14",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 2,
+        pointsreq: 20,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 17,
@@ -225,11 +210,23 @@ const mgArc = [
         },
         id: "mgArc15",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 1,
+        pointsreq: 20,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
+        dependency: function (arg) {
+            if (arg === true) {
+                mgArc[21].depend = undefined;
+                mgArc[22].depend = undefined;
+                mgArc[21].available = true;
+                mgArc[22].available = true;
+            } else if (arg === false) {
+                mgArc[21].depend = true;
+                mgArc[22].depend = true;
+                mgArc[21].available = false;
+                mgArc[22].available = false;
+            }
+        },
     },
     {
         square: 18,
@@ -244,10 +241,9 @@ const mgArc = [
         id: "mgArc16",
         talent: true,
         max: 5,
-        pointsreq: 5,
+        pointsreq: 20,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 20,
@@ -257,11 +253,10 @@ const mgArc = [
         },
         id: "mgArc17",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 25,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 21,
@@ -271,11 +266,20 @@ const mgArc = [
         },
         id: "mgArc18",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 25,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
+        depend: true,
+        dependency: function (arg) {
+            if (arg === true) {
+                mgArc[25].depend = undefined;
+                mgArc[25].available = true;
+            } else if (arg === false) {
+                mgArc[25].depend = true;
+                mgArc[25].available = false;
+            }
+        },
     },
     {
         square: 22,
@@ -285,11 +289,11 @@ const mgArc = [
         },
         id: "mgArc19",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 2,
+        pointsreq: 25,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
+        depend: true,
     },
     {
         square: 23,
@@ -303,11 +307,10 @@ const mgArc = [
         },
         id: "mgArc20",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 30,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 25,
@@ -317,11 +320,20 @@ const mgArc = [
         },
         id: "mgArc21",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 1,
+        pointsreq: 30,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
+        depend: true,
+        dependency: function (arg) {
+            if (arg === true) {
+                mgArc[29].depend = undefined;
+                mgArc[29].available = true;
+            } else if (arg === false) {
+                mgArc[29].depend = true;
+                mgArc[29].available = false;
+            }
+        },
     },
     {
         square: 26,
@@ -331,11 +343,10 @@ const mgArc = [
         },
         id: "mgArc22",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 3,
+        pointsreq: 30,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 27,
@@ -353,11 +364,11 @@ const mgArc = [
         },
         id: "mgArc23",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 2,
+        pointsreq: 35,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
+        depend: true,
     },
     {
         square: 30,
@@ -368,10 +379,9 @@ const mgArc = [
         id: "mgArc24",
         talent: true,
         max: 5,
-        pointsreq: 5,
+        pointsreq: 35,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 31,
@@ -389,11 +399,10 @@ const mgArc = [
         },
         id: "mgArc25",
         talent: true,
-        max: 5,
-        pointsreq: 5,
+        max: 1,
+        pointsreq: 40,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 34,
@@ -404,10 +413,9 @@ const mgArc = [
         id: "mgArc26",
         talent: true,
         max: 5,
-        pointsreq: 5,
+        pointsreq: 40,
         available: false,
         complete: false,
-        img: "img/holy/DivineIntellect.png"
     },
     {
         square: 35,
@@ -425,11 +433,10 @@ const mgArc = [
         },
         id: 'mgArc27',
         talent: true,
-        max: 2,
+        max: 3,
         pointsreq: 45,
         available: false,
         complete: false,
-        depend: true,
     },
     {
         square: 38,

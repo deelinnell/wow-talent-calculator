@@ -1,4 +1,4 @@
-import styles from '@/styles/TalentButon.module.css'
+import styles from '@/styles/TalentButton.module.css'
 import { useState, useEffect, memo } from "react";
 import useTotalStore from "./../components/store";
 

@@ -68,31 +68,31 @@
 /*** PALADIN ***/
 
 #paHoly0 {
-    background-image: url(../public/static/images/paladin/holy/SpiritualFocus.png);
+    background-image: url(./../public/static/images/paladin/holy/SpiritualFocus.png);
     background-size: cover;
 }
 #paHoly1 {
-    background-image: url(../public/static/images/paladin/holy/SealofPure.png);
+    background-image: url(./../public/static/images/paladin/holy/SealofPure.png);
     background-size: cover;
 }
 #paHoly2 {
-    background-image: url(../public/static/images/paladin/holy/HealingLight.png);
+    background-image: url(./../public/static/images/paladin/holy/HealingLight.png);
     background-size: cover;
 }
 #paHoly3 {
-    background-image: url(../public/static/images/paladin/holy/DivineIntellect.png);
+    background-image: url(./../public/static/images/paladin/holy/DivineIntellect.png);
     background-size: cover;
 }
 #paHoly4 {
-    background-image: url(../public/static/images/paladin/holy/UnyieldingFaith.png);
+    background-image: url(./../public/static/images/paladin/holy/UnyieldingFaith.png);
     background-size: cover;
 }
 #paHoly5 {
-    background-image: url(../public/static/images/paladin/holy/AuraMastery.png);
+    background-image: url(./../public/static/images/paladin/holy/AuraMastery.png);
     background-size: cover;
 }
 #paHoly6 {
-    background-image: url(../public/static/images/paladin/holy/Illumination.png);
+    background-image: url(./../public/static/images/paladin/holy/Illumination.png);
     background-size: cover;
 }
 #paHoly7 {
@@ -152,15 +152,15 @@
     background-size: cover;
 }
 #paHoly21 {
-    background-image: url(../public/static/images/paladin/holy/DivineIllumination.png);
+    background-image: url(./../public/static/images/paladin/holy/DivineIllumination.png);
     background-size: cover;
 }
 #paHoly22 {
-    background-image: url(../public/static/images/paladin/holy/JudgementofthePure.png);
+    background-image: url(./../public/static/images/paladin/holy/JudgementofthePure.png);
     background-size: cover;
 }
 #paHoly23 {
-    background-image: url(../public/static/images/paladin/holy/InfusionofLight.png);
+    background-image: url(./../public/static/images/paladin/holy/InfusionofLight.png);
     background-size: cover;
 }
 #paHoly24 {
@@ -379,3 +379,372 @@
     background-image: url(./../public/static/images/paladin/ret/DivineStorm.png);
     background-size: cover;
 }
+
+/*** MAGE ***/
+
+#mgArc0 {
+    background-image: url(./../public/static/images/mage/arcane/spell_holy_dispelmagic.jpg);
+    background-size: cover;
+    
+}
+#mgArc1 {
+    background-image: url(./../public/static/images/paladin/prot/Toughness.png);
+    background-size: cover;
+}
+#mgArc2 {
+    background-image: url(./../public/static/images/mage/arcane/spell_nature_starfall.jpg);
+    background-size: cover;
+}
+#mgArc3 {
+    background-image: url(./../public/static/images/mage/arcane/ArcaneResilience.png);
+    background-size: cover;
+}
+#mgArc4 {
+    background-image: url(./../public/static/images/mage/arcane/spell_nature_astralrecalgroup.jpg);
+    background-size: cover;
+}
+#mgArc5 {
+    background-image: url(./../public/static/images/mage/arcane/spell_shadow_manaburn.jpg);
+    background-size: cover;
+}
+#mgArc6 {
+    background-image: url(./../public/static/images/mage/arcane/spell_nature_abolishmagic.jpg);
+    background-size: cover;
+}
+#mgArc7 {
+    background-image: url(./../public/static/images/mage/arcane/spell_nature_wispsplode.jpg);
+    background-size: cover;
+}
+#mgArc8 {
+    background-image: url(./../public/static/images/mage/arcane/ability_mage_studentofthemind.jpg);
+    background-size: cover;
+}
+#mgArc9 {
+    background-image: url(./../public/static/images/mage/arcane/spell_arcane_studentofmagic.jpg);
+    background-size: cover;
+}
+#mgArc10 {
+    background-image: url(./../public/static/images/mage/arcane/spell_shadow_detectlesserinvisibility.jpg);
+    background-size: cover;
+}
+#mgArc11 {
+    background-image: url(./../public/static/images/mage/arcane/spell_frost_iceshock.jpg);
+    background-size: cover;
+}
+#mgArc12 {
+    background-image: url(./../public/static/images/mage/arcane/spell_shadow_siphonmana.jpg);
+    background-size: cover;
+}
+#mgArc13 {
+    background-image: url(./../public/static/images/mage/arcane/ability_mage_tormentoftheweak.jpg);
+    background-size: cover;
+}
+#mgArc14 {
+    background-image: url(./../public/static/images/mage/arcane/spell_arcane_blink.jpg);
+    background-size: cover;
+}
+#mgArc15 {
+    background-image: url(./../public/static/images/mage/arcane/spell_nature_enchantarmor.jpg);
+    background-size: cover;
+}
+#mgArc16 {
+    background-image: url(./../public/static/images/mage/arcane/spell_shadow_charm.jpg);
+    background-size: cover;
+}
+#mgArc17 {
+    background-image: url(./../public/static/images/mage/arcane/spell_arcane_prismaticcloak.jpg);
+    background-size: cover;
+}
+#mgArc18 {
+    background-image: url(./../public/static/images/mage/arcane/Arcane04.png);
+    background-size: cover;
+}
+#mgArc19 {
+    background-image: url(./../public/static/images/mage/arcane/ArcanePotency.png);
+    background-size: cover;
+}
+#mgArc20 {
+    background-image: url(./../public/static/images/mage/arcane/spell_nature_starfall.jpg);
+    background-size: cover;
+}
+#mgArc21 {
+    background-image: url(./../public/static/images/mage/arcane/spell_nature_lightning.jpg);
+    background-size: cover;
+}
+#mgArc22 {
+    background-image: url(./../public/static/images/mage/arcane/ability_mage_incantersabsorbtion.jpg);
+    background-size: cover;
+}
+#mgArc23 {
+    background-image: url(./../public/static/images/mage/arcane/ability_mage_potentspirit.jpg);
+    background-size: cover;
+}
+#mgArc24 {
+    background-image: url(./../public/static/images/mage/arcane/spell_arcane_mindmastery.jpg);
+    background-size: cover;
+}
+#mgArc25 {
+    background-image: url(./../public/static/images/mage/arcane/Slow.png);
+    background-size: cover;
+}
+#mgArc26 {
+    background-image: url(./../public/static/images/mage/arcane/ability_mage_missilebarrage.jpg);
+    background-size: cover;
+}
+#mgArc27 {
+    background-image: url(./../public/static/images/mage/arcane/ability_mage_netherwindpresence.jpg);
+    background-size: cover;
+}
+#mgArc28 {
+    background-image: url(./../public/static/images/mage/arcane/spell_arcane_arcanetorrent.jpg);
+    background-size: cover;
+}
+#mgArc29 {
+    background-image: url(./../public/static/images/mage/arcane/ArcaneBarrage.png);
+    background-size: cover;
+}
+
+/* 
+#mg0 {
+    background-image: url(./../);
+    background-size: cover;
+    
+}
+#mg1 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg2 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg3 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg4 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg5 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg6 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg7 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg8 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg9 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg10 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg11 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg12 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg13 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg14 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg15 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg16 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg17 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg18 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg19 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg20 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg21 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg22 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg23 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg24 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg25 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg26 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg27 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg28 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg29 {
+    background-image: url(./../);
+    background-size: cover;
+}
+
+#mg0 {
+    background-image: url(./../);
+    background-size: cover;
+    
+}
+#mg1 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg2 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg3 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg4 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg5 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg6 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg7 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg8 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg9 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg10 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg11 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg12 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg13 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg14 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg15 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg16 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg17 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg18 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg19 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg20 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg21 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg22 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg23 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg24 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg25 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg26 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg27 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg28 {
+    background-image: url(./../);
+    background-size: cover;
+}
+#mg29 {
+    background-image: url(./../);
+    background-size: cover;
+} */
