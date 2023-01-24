@@ -12,7 +12,14 @@
     box-shadow: 0 0 10px 3px black;
     margin: 15px auto 15px auto;
     border-radius: 50px;
+}
+
+.nav_bar.pa {
     box-shadow: 0 0 10px 3px var(--paladin-color);
+}
+
+.nav_bar.mg {
+    box-shadow: 0 0 10px 3px var(--mage-color);
 }
 
 .link_container {
@@ -26,13 +33,12 @@
 .link_container.pa {
     border-left: solid 5px var(--paladin-color);
     border-right: solid 1px var(--paladin-color);
-    background-image: linear-gradient(rgb(190, 150, 150), rgb(245, 210, 216) 15%, rgb(197, 147, 147) 70%);
-    color: rgb(94, 220, 230);
+    background-image: linear-gradient(rgb(172, 128, 128), rgb(245, 210, 216) 15%, var(--paladin-color) 70%);
 }
 .link_container.mg {
-    border-left: solid 5px rgb(5, 116, 160);
-    border-right: solid 1px rgb(5, 111, 153);
-    background-image: linear-gradient(rgb(33, 117, 150), rgb(96, 168, 197) 15%, rgb(52, 137, 170) 70%);
+    border-left: solid 5px var(--mage-color);
+    border-right: solid 1px var(--mage-color);
+    background-image: linear-gradient(#6db6ca, #b8e5f3 15%, var(--mage-color) 70%);
     background-color: rgba(0, 100, 139, 0.527);
 }
 
@@ -116,26 +122,6 @@
     border-radius: 10px;
 }
 
-.icon_paladin {
-    background-image: url("./../public/static/images/paladin.png");
-    background-size: contain;
-}
-
-.icon_holy {
-    background-image: url("./../public/static/images/holy/HealingLight.png");
-    background-size: contain; 
-}
-
-.icon_prot {
-    background-image: url("./../public/static/images/prot/Devotion.png");
-    background-size: contain; 
-}
-
-.icon_ret {
-    background-image: url("./../public/static/images/ret/AuraOfLight.png");
-    background-size: contain; 
-}
-
 .spec_column {
     position: relative;
     display: grid;
@@ -145,18 +131,75 @@
     border: 3px solid black;
     border-radius: 6px;
     box-shadow: 0 0 80px 10px black inset;
+    background-size: cover;
 }
 
-.spec_column.one {
-    background-image: url("./../public/static/images/holybackground.png");
+/*** PALADIN ***/
+
+.icon_paladin {
+    background-image: url("./../public/static/images/paladin.png");
+    background-size: contain;
 }
 
-.spec_column.two {
-    background-image: url("./../public/static/images/protbackground.png");
+.icon_paladin_holy {
+    background-image: url("./../public/static/images/paladin/holy/HealingLight.png");
+    background-size: contain; 
 }
 
-.spec_column.three {
-    background-image: url("./../public/static/images/retbackground.png");    
+.icon_paladin_prot {
+    background-image: url("./../public/static/images/paladin/prot/Devotion.png");
+    background-size: contain; 
+}
+
+.icon_paladin_ret {
+    background-image: url("./../public/static/images/paladin/ret/AuraOfLight.png");
+    background-size: contain; 
+}
+
+.bg_paladin_holy {
+    background-image: url("./../public/static/images/paladin/holybackground.png");
+}
+
+.bg_paladin_prot {
+    background-image: url("./../public/static/images/paladin/protbackground.png");
+}
+
+.bg_paladin_ret {
+    background-image: url("./../public/static/images/paladin/retbackground.png");    
+}
+
+/*** MAGE ***/
+
+.icon_mage {
+    background-image: url("./../public/static/images/mage.png");
+    background-size: contain;
+}
+
+.icon_mage_arcane {
+    background-image: url("./../public/static/images/mage/arcane/MagicalSentry.png");
+    background-size: contain;
+}
+
+.icon_mage_fire {
+    background-image: url("./../public/static/images/mage/fire/FireBolt02.png");
+    background-size: contain;
+}
+
+.icon_mage_frost {
+    background-image: url("./../public/static/images/mage/frost/FrostBolt02.png");
+    background-size: contain;
+}
+
+.bg_mage_arcane {
+    background-image: url("./../public/static/images/mage/arcanebackground.png");
+}
+
+.bg_mage_fire {
+    background-image: url("./../public/static/images/mage/firebackground.png");
+}
+
+.bg_mage_frost {
+    background-image: url("./../public/static/images/mage/frostbackground.png");
 }
 
 .spec_header {

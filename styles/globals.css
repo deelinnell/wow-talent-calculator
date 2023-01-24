@@ -7,6 +7,7 @@
     font-weight: bold;
     color: rgb(187, 187, 187);
     --paladin-color: palevioletred;
+    --mage-color: #3fc7eb;
 }
 
 body {
